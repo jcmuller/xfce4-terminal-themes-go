@@ -42,8 +42,7 @@ Theme Name 3
 ```sh
 $ xfce4-terminal-themes -c
 Theme name: Theme Name 2
-Font name: Terminus
-Font size: 11
+Font name: Terminus 9
 ```
 
 ### Set theme:

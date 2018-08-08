@@ -1,5 +1,8 @@
 # xfce4-terminal-themes-go
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/jcmuller/xfce4-terminal-themes-go)](https://goreportcard.com/report/github.com/jcmuller/xfce4-terminal-themes-go)
+[![Sourcegraph](https://sourcegraph.com/github.com/jcmuller/xfce4-terminal-themes-go/-/badge.svg)](https://sourcegraph.com/github.com/xfce4-terminal-themes-go?badge)
+
 Switch xfce4-terminal themes with ease!
 
 ## Installation

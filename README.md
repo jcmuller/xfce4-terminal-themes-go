@@ -1,4 +1,4 @@
-# xfce4-terminal-themes
+# xfce4-terminal-themes-go
 
 Switch xfce4-terminal themes with ease!
 

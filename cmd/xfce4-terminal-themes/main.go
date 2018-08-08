@@ -88,38 +88,33 @@ func main() {
 	listThemes := pflag.BoolP("themes", "l", false, "List theme names")
 	current := pflag.BoolP("current", "c", false, "Display current theme")
 	version := pflag.BoolP("version", "V", false, "Show version")
-	help := pflag.BoolP("help", "h", false, "Show help")
+	pflag.BoolP("help", "h", false, "Show help")
 
 	pflag.Parse()
 	args := pflag.Args()
 
-	if *help {
-		fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])
-		fmt.Fprintf(os.Stderr, "    %s [themeName] [OPTIONS]\n", os.Args[0])
-		pflag.PrintDefaults()
-
-		os.Exit(0)
-	}
-
-	if *listThemes {
+	switch {
+	case *listThemes:
 		fmt.Println(strings.Join(themeNames(themes), "\n"))
 		os.Exit(0)
-	}
 
-	if *current {
+	case *current:
 		section := config.Section("Configuration")
 		fmt.Println(currentTheme(section))
 		os.Exit(0)
-	}
 
-	if *version {
+	case *version:
 		fmt.Printf("%s %s\n", os.Args[0], Version)
 		os.Exit(0)
-	}
 
-	if len(args) > 0 {
+	case len(args) > 0:
 		themeName := strings.Join(args, " ")
 		setTheme(config, themes, themeName)
+		os.Exit(0)
+	default:
+		fmt.Fprintf(os.Stderr, "Usage: %s [OPTIONS|THEME NAME]\n", os.Args[0])
+		pflag.PrintDefaults()
+
 		os.Exit(0)
 	}
 }

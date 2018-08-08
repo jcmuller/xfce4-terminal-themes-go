@@ -12,6 +12,7 @@ import (
 )
 
 var (
+	// Version of this tool
 	Version        = "0.1.0"
 	configFileName = "terminalrc"
 	themesFileName = "themes"

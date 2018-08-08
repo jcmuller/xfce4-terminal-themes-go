@@ -4,7 +4,7 @@ Switch xfce4-terminal themes with ease!
 
 ## Installation
 ```bash
-$ go get github.com/jcmuller/xfce4-terminal-themes-go
+$ go get -u github.com/jcmuller/xfce4-terminal-themes-go/...
 ```
 
 ## Usage

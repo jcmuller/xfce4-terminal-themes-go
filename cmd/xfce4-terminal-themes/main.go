@@ -1,14 +1,14 @@
 package main
 
 import (
-	"os"
-	"path"
-	"gopkg.in/ini.v1"
+	"bytes"
 	"fmt"
 	"github.com/spf13/pflag"
-	"strings"
+	"gopkg.in/ini.v1"
+	"os"
+	"path"
 	"sort"
-	"bytes"
+	"strings"
 )
 
 var (

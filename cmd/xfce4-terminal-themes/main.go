@@ -74,13 +74,13 @@ func setTheme(config *ini.File, themes *ini.File, themeName string) {
 func main() {
 	config, err := readConfig(configFileName)
 	if err != nil {
-		fmt.Errorf("Fail to read file: %v", err)
+		fmt.Printf("Fail to read file: %v", err)
 		os.Exit(1)
 	}
 
 	themes, err := readConfig(themesFileName)
 	if err != nil {
-		fmt.Errorf("Fail to read file: %v", err)
+		fmt.Printf("Fail to read file: %v", err)
 		os.Exit(1)
 	}
 
